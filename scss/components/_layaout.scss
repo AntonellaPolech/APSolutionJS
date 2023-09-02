@@ -1,0 +1,801 @@
+//!layout--------------------------------
+//aca ponemos lo que conforma el main de todos los documentos
+
+.hero {
+    width: 100%;
+    height: 600px;
+    background-color: white;
+    background-position: center;
+    background-image: url("../img/workteam.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+
+    div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.475);
+
+        div {
+            h1 {
+                font-family: 'Mulish', sans-serif;
+                font-size: nth($font-size, 4);
+                font-weight: 900;
+                color: nth($paleta-colores, 1);
+                //Animación
+                animation-duration: 2s;
+            }
+
+
+            h2 {
+                font-size: 40px;
+                font-weight: 400;
+                color: white;
+                display: flex;
+                flex-direction: row;
+                justify-content: left;
+                align-items: center;
+                padding: 0px 0px 15px 0px;
+                //Animación
+                animation-duration: 2s;
+            }
+
+            button {
+                width: max-content;
+                font-weight: 400;
+                padding: 10px 15px;
+                font-size: 14px;
+                background-color: $color-primario;
+                color: white;
+                border: none;
+                box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+                -webkit-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+                -moz-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+                //transicion 
+                transition-property: background-color;
+                transition-duration: 0.5s;
+                transition: 0.8s;
+                //animación
+                animation-duration: 2s;
+
+
+                &:hover {
+                    background-color: #ffc759;
+                    color: $color-primario;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+//!PRESENTACION-------------------------------------
+.presentacion {
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+    background-color: nth($paleta-colores, 5);
+    background-position: center;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 400px);
+
+    .p1 {
+        grid-column: 2/4;
+        grid-row: 2/4;
+        //diseño
+        width: 300px;
+        height: 300px;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+        padding: 30px;
+        margin: 10px;
+        background-color: nth($paleta-colores, 1);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //transicion
+        transition: 0.5s ease-in;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    .p2 {
+        grid-column: 3/5;
+        grid-row: 1/2;
+        //diseño
+        width: 300px;
+        height: 300px;
+        font-size: 20px;
+        font-weight: 400;
+        text-align: left;
+        padding: 30px;
+        margin-top: 50px;
+        background-color: white;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        //transicion
+        transition: 0.5s ease-in;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+    }
+
+    .presentacionTitulo {
+        grid-column: 5/8;
+        grid-row: 1/6;
+        margin-left: 20px;
+        padding-left: 15px;
+        //flex
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+
+        h2 {
+            font-size: 45px;
+            font-weight: bolder;
+            margin-bottom: 15px;
+        }
+
+        .p3 {
+            font-size: 25px;
+            font-weight: 200;
+            text-align: left;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        .p4 {
+            font-size: 25px;
+            font-weight: 200;
+            text-align: left;
+            padding: 5px;
+            margin-top: 10px;
+        }
+
+        button {
+            width: max-content;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            background-color: nth($paleta-colores, 1);
+            color: white;
+            border: none;
+            //transicion 
+            transition-property: background-color;
+            transition-duration: 0.5s;
+            transition: 0.5s ease-in-out;
+
+            &:hover {
+                background-color: $color-secundario;
+                color: $color-primario;
+                font-weight: 600;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
+
+
+//!SERVICIOS-------------------------------------
+.servicios {
+    width: 100%;
+    height: 120%;
+    background-color: $color-quinto;
+    color: black;
+    padding: 5px;
+    padding-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: 1/2fr 1fr 1fr;
+    gap: 20px;
+
+    .tituloServicios {
+        grid-column: 2/11;
+        grid-row: 1;
+        //h2 
+        font-size: 40px;
+        font-weight: 900;
+        padding: 20px;
+        background-color: $color-quinto;
+        text-align: center;
+        @extend %flex;
+    }
+
+    /*--Diseño de los cuadros--*/
+    div {
+        padding: 25px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: left;
+        box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.32);
+        -webkit-box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.32);
+        -moz-box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.32);
+        //transicion 
+        transition-property: background-color;
+        transition-duration: 0.5s;
+        transition-timing-function: ease;
+        transition: 0.5s ease-out;
+
+        &:hover {
+            background-color: #ffc859aa;
+            transform: translateY(-2px);
+        }
+
+        img {
+            width: 90px;
+            height: 90px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: 900;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-weight: 200;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: max-content;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: 400;
+            background-color: #ff6542de;
+            color: white;
+            border: none;
+            //transicion 
+            transition-property: background-color;
+            transition-duration: 0.3s;
+
+            &:hover {
+                background-color: #607196;
+                color: black;
+                font-weight: 600;
+            }
+        }
+    }
+
+    //GRID
+    .servicio1 {
+        grid-column: 2/5;
+        grid-row: 2;
+    }
+
+    .servicio2 {
+        grid-column: 5/8;
+        grid-row: 2;
+    }
+
+    .servicio3 {
+        grid-column: 8/11;
+        grid-row: 2;
+    }
+
+    .servicio4 {
+        grid-column: 2/5;
+        grid-row: 3;
+    }
+
+    .servicio5 {
+        grid-column: 5/8;
+        grid-row: 3;
+    }
+
+    .servicio6 {
+        grid-column: 8/11;
+        grid-row: 3;
+    }
+}
+
+//EXPERIENCIAS-------------------------------------
+//!BOOTSTRAP/
+.experiencias {
+    width: 100%;
+    height: 100%;
+
+    div {
+        h2 {
+            font-size: 35px;
+            font-weight: 900;
+            background-color: #fbfbfb;
+            text-align: center;
+            @extend %flex;
+        }
+    }
+
+    div {
+        .carousel-inner {
+            width: 100%;
+            height: 100%;
+
+            div {
+                img {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+//FORMULARIO-------------------------------------
+.formulario {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    h2 {
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    h3 {
+        width: 100%;
+        font-size: 25px;
+        color: $color-primario;
+        text-align: center;
+    }
+
+    .cuerpoformulario {
+        width: 100%;
+        height: 100%;
+        @include flex (flex, row, space-evenly, center);
+
+        form {
+            width: 100%;
+            height: 30%;
+            padding: 10px;
+
+            ul {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                @include flex (flex, column, start, center);
+
+                li {
+                    width: 50%;
+
+                    div {
+                        input {
+                            font-size: 12px;
+
+                            &:hover {
+                                border: solid 1px black;
+                            }
+                        }
+
+                        textarea {
+                            font-size: 14px;
+
+                            &:hover {
+                                border: solid 1px black;
+                            }
+                        }
+
+                        button {
+                            width: 100%;
+                            background-color: $color-primario;
+                            border: none;
+                            //transicion 
+                            transition-property: background-color;
+                            transition-duration: 0.3s;
+
+                            transition: 0.8s ease-out;
+
+                            &:hover {
+                                background-color: #fa9a84;
+                                transform: translateY(-2px);
+                            }
+
+                            input {
+                                width: max-content;
+                                height: max-content;
+                                background-color: transparent;
+                                border: none;
+                                color: white;
+                                font-size: 16px;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                                //transicion 
+                                transition-property: color;
+                                transition-duration: 0.3s;
+
+                                &:hover {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        width: 50%;
+        height: 40%;
+    }
+}
+
+//BOTON WSP-------------------------------------
+//! Boton de WSP fijo
+.botonWsp {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+
+    button {
+        border: none;
+        background-color: transparent;
+
+        i {
+            color: $color-primario;
+            font-size: 55px;
+            //transicion 
+            transition-property: color;
+            transition-duration: 0.3s;
+
+            &:hover {
+                color: $color-secundario;
+            }
+        }
+    }
+}
+
+//* HTML NOSOTROS-----------------------------------------
+//!HERO
+.heroNosotros {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background: rgb(255, 199, 89);
+    background: radial-gradient(circle, rgba(255, 199, 89, 1) 0%, rgba(255, 101, 66, 1) 100%);
+    color: white;
+    @include flex(flex, row, space-between, center);
+
+    div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .turning {
+            font-family: 'Mulish', sans-serif;
+            font-size: 55px;
+            font-weight: 900;
+            color: black;
+            text-transform: capitalize;
+            text-align: center;
+            padding-bottom: 40px;
+        }
+
+        .Turning2 {
+            width: 70%;
+            text-align: center;
+            font-size: 25px;
+            font-weight: 400;
+            color: black;
+
+            .nosotrosApSoluciones {
+                color: nth($paleta-colores, 5);
+                font-style: inherit;
+                font-size: 25px;
+                font-weight: 900;
+                font-style: oblique;
+            }
+        }
+    }
+}
+
+//NOSOTROS - PRESENTACIÓN--------------------------------------
+.presentacionNosotros {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+
+    div {
+        width: 100%;
+        height: max-content;
+        padding-left: 50px;
+        text-align: justify;
+
+        .p1Nosotros {
+            width: 100%;
+            height: 50%;
+            padding: 15px;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .p2Nosotros {
+            width: 100%;
+            height: 50%;
+            padding: 15px;
+            font-size: 20px;
+            font-weight: 300;
+        }
+
+        /*Boton:trabajemos juntos*/
+        button {
+            width: max-content;
+            font-weight: 400;
+            padding: 10px 15px;
+            margin: 15px;
+            font-size: 14px;
+            background-color: #FF6542;
+            color: white;
+            border: none;
+            box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+            -webkit-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+            -moz-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+        }
+    }
+
+    .imgNosotros {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+// HTML SERVICIOS ---------------------------------------------------
+//*HERO/
+.heroServicios {
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    background: nth($paleta-colores, 5);
+    color: white;
+    @include flex(flex, row, space-between, center);
+
+    div {
+        width: 100%;
+        height: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .nosomos {
+            font-family: 'Mulish', sans-serif;
+            font-size: 50px;
+            font-weight: 600;
+            color: black;
+            text-align: center;
+            padding-bottom: 40px;
+
+            .socioEstrategico {
+                color: nth($paleta-colores, 1);
+                font-weight: 900;
+            }
+        }
+    }
+}
+
+//-----------------------HTML TRABAJA CON NOSOTROS
+//*hero/
+.heroTrabaja {
+    width: 100%;
+    height: 500px;
+    background-color: white;
+    background-position: center;
+    background-image: url("/img/equipodetrabajo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+
+    div {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.871);
+
+        .trabajaconnosotros {
+            color: nth($paleta-colores, 1);
+            font-size: 65px;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: nth($paleta-colores, 5);
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
+
+
+//*----------FORMULARIO TRABAJA CON NOSOTROS-------/
+.formularioTrabaja {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    h2 {
+        width: 100%;
+        height: 100%;
+        font-size: 35px;
+        font-weight: 400;
+        text-align: center;
+        padding-top: 10px;
+        padding: 10px 30px 5px 30px;
+    }
+
+    h3 {
+        width: 100%;
+        font-size: 25px;
+        color: $color-primario;
+        text-align: center;
+    }
+
+    .cuerpoformulario {
+        width: 100%;
+        height: 100%;
+        @include flex (flex, row, space-evenly, center);
+
+        form {
+            width: 100%;
+            height: 30%;
+            padding: 10px;
+
+            ul {
+                width: 100%;
+                padding: 0px;
+                margin: 0px;
+                @include flex (flex, column, start, center);
+
+                li {
+                    width: 50%;
+
+                    div {
+                        input {
+                            font-size: 12px;
+
+                            &:hover {
+                                border: solid 1px black;
+                            }
+                        }
+
+                        textarea {
+                            font-size: 14px;
+
+                            &:hover {
+                                border: solid 1px black;
+                            }
+                        }
+
+                        button {
+                            width: 100%;
+                            background-color: $color-primario;
+                            border: none;
+                            //transicion 
+                            transition-property: background-color;
+                            transition-duration: 0.3s;
+
+                            transition: 0.8s ease-out;
+
+                            &:hover {
+                                background-color: #fa9a84;
+                                transform: translateY(-2px);
+                            }
+
+                            input {
+                                width: max-content;
+                                height: max-content;
+                                background-color: transparent;
+                                border: none;
+                                color: white;
+                                font-size: 16px;
+                                font-weight: 600;
+                                letter-spacing: 1px;
+                                //transicion 
+                                transition-property: color;
+                                transition-duration: 0.3s;
+
+                                &:hover {
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    img {
+        width: 50%;
+        height: 40%;
+    }
+}
+
+//*HTML SUSCRIBETE----------------------------------------------/
+//*hero/
+.heroSuscribete {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+
+    .suscribeteDiv1 {
+        width: 100%;
+        height: 100%;
+        @include flex (flex, column, space-evenly, center);
+
+        h1 {
+            color: nth($paleta-colores, 1);
+            font-size: 50px;
+            font-weight: 600;
+            text-align: left;
+            padding-bottom: 25px;
+            padding-top: 25px;
+        }
+    }
+
+    .suscribeteDiv2 {
+        width: 100%;
+        height: 100%;
+        @include flex (flex, row, space-evenly, center);
+
+        h2 {
+            width: 75%;
+            color: black;
+            font-size: 25px;
+            font-weight: 200;
+            text-align: left;
+            padding: 45px;
+
+            .suscribeteApSoluciones {
+                color: #607196;
+                font-weight: 600;
+            }
+        }
+
+        img {
+            width: 50%;
+            height: 100%;
+        }
+    }
+}

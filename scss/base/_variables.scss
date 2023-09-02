@@ -1,0 +1,46 @@
+$color-primario: #ff6542;
+$color-secundario: #ffc859;
+$color-terciario: #607196;
+$color-cuarto: #c5c5c5;
+$color-quinto: #fbfbfb;
+
+//LISTAS: 
+$paleta-colores: #ff6542,
+    #ffc859,
+    #607196,
+    #c5c5c5,
+    #fbfbfb;
+
+$font-size: 12px,
+    24px,
+    36px,
+    48px;
+
+
+//* OPERACIONES
+//OPERACIONES ARITMETICOS + - * /
+
+//* MAPAS 
+//KEY + VALUE
+$boton: (
+    bg-boton: #ff6542,
+    color-text: white,
+    border: none
+);
+
+// EXTENDS - puedo traer varios elementos en conjunto
+// % = PLACEHOLDER
+%flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+//MIXINS
+@mixin flex ($flex, $direction, $justify, $align) {
+    display: $flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}

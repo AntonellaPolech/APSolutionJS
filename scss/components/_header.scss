@@ -1,0 +1,110 @@
+//!HEADER ------------------------
+
+
+header nav {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    margin: 0px;
+    background-color: $color-quinto;
+    color: white;
+    /*GRID*/
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 1fr nav
+}
+
+.headerLogo {
+    grid-column: 1/2;
+}
+
+.headerBarra {
+    grid-column: 2/3;
+}
+
+.headerLogo {
+    @extend %flex;
+    transition: 0.8s;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+/*Elimino el margin y padding que hereda desde Bootstrap*/
+.headerBarra ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+div {
+    img {
+        height: 100%;
+        width: 110px;
+    }
+
+    ul {
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+
+        li {
+
+            a {
+                width: 100%;
+                height: 100%;
+                color: black;
+                font-size: 16px;
+                font-weight: 600;
+                padding: 5px;
+                text-decoration: none;
+                //transicion 
+                transition-property: color;
+                transition-duration: 0.3s;
+
+                &:hover {
+                    color: $color-primario;
+                }
+
+                /*"inicio" con diferente color*/
+                .resaltador {
+                    color: $color-primario;
+                    font-size: 17px;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        button {
+            width: max-content;
+            padding: 10px 15px 10px 15px;
+            font-size: 16px;
+            font-weight: 900;
+            background-color: map-get($boton, bg-boton);
+            color: map-get($boton, color-text);
+            border: map-get($boton, border);
+            margin-left: 5px;
+            box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+            -webkit-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+            -moz-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+            //transicion 
+            transition-property: background-color;
+            transition-duration: 0.3s;
+            transition: 1s;
+
+            &:hover {
+                background-color: #fa9a84;
+                transform: scale(1.1);
+
+                &:active {
+                    color: black;
+                }
+            }
+        }
+    }
+}

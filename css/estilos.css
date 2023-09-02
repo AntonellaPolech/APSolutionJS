@@ -1,0 +1,1253 @@
+@charset "UTF-8";
+/*RESET*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Mulish', sans-serif; }
+
+/*----------TITULOS----------*/
+h2 {
+  font-family: 'Mulish', sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+  text-align: left; }
+
+/*TODAS LAS LISTAS Y SUS ELEMENTOS*/
+ul {
+  list-style-type: none;
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.accesoContactos ul, .headerLogo, .servicios .tituloServicios, .experiencias div h2, footer .footerLogo button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.accesoContactos ul {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #c5c5c5;
+  border-color: #c5c5c5; }
+  .accesoContactos ul li button {
+    width: max-content;
+    padding: 5px 10px 5px 10px;
+    color: black;
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    transition: 0.8s; }
+    .accesoContactos ul li button:hover {
+      transform: scale(1.1); }
+    .accesoContactos ul li button i {
+      color: #ff6542; }
+    .accesoContactos ul li button a {
+      color: black;
+      font-size: 12px;
+      font-weight: 200;
+      padding: 5px;
+      transition-property: color;
+      transition-duration: 0.3s; }
+      .accesoContactos ul li button a:hover {
+        color: #ff6542; }
+
+header nav {
+  height: 100%;
+  width: 100%;
+  padding: 5px;
+  margin: 0px;
+  background-color: #fbfbfb;
+  color: white;
+  /*GRID*/
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  grid-template-rows: 1fr nav; }
+
+.headerLogo {
+  grid-column: 1/2; }
+
+.headerBarra {
+  grid-column: 2/3; }
+
+.headerLogo {
+  transition: 0.8s; }
+  .headerLogo:hover {
+    transform: scale(1.1); }
+
+/*Elimino el margin y padding que hereda desde Bootstrap*/
+.headerBarra ul {
+  padding: 0px;
+  margin: 0px; }
+
+div img {
+  height: 100%;
+  width: 110px; }
+
+div ul {
+  padding: 0px;
+  margin: 0px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center; }
+  div ul li a {
+    width: 100%;
+    height: 100%;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.3s;
+    /*"inicio" con diferente color*/ }
+    div ul li a:hover {
+      color: #ff6542; }
+    div ul li a .resaltador {
+      color: #ff6542;
+      font-size: 17px;
+      font-weight: 600; }
+  div ul button {
+    width: max-content;
+    padding: 10px 15px 10px 15px;
+    font-size: 16px;
+    font-weight: 900;
+    background-color: #ff6542;
+    color: white;
+    border: none;
+    margin-left: 5px;
+    box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+    -webkit-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+    -moz-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+    transition-property: background-color;
+    transition-duration: 0.3s;
+    transition: 1s; }
+    div ul button:hover {
+      background-color: #fa9a84;
+      transform: scale(1.1); }
+      div ul button:hover:active {
+        color: black; }
+
+.hero {
+  width: 100%;
+  height: 600px;
+  background-color: white;
+  background-position: center;
+  background-image: url("../img/workteam.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center; }
+  .hero div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.475); }
+    .hero div div h1 {
+      font-family: 'Mulish', sans-serif;
+      font-size: 48px;
+      font-weight: 900;
+      color: #ff6542;
+      animation-duration: 2s; }
+    .hero div div h2 {
+      font-size: 40px;
+      font-weight: 400;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      justify-content: left;
+      align-items: center;
+      padding: 0px 0px 15px 0px;
+      animation-duration: 2s; }
+    .hero div div button {
+      width: max-content;
+      font-weight: 400;
+      padding: 10px 15px;
+      font-size: 14px;
+      background-color: #ff6542;
+      color: white;
+      border: none;
+      box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+      -webkit-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+      -moz-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      transition: 0.8s;
+      animation-duration: 2s; }
+      .hero div div button:hover {
+        background-color: #ffc759;
+        color: #ff6542;
+        font-weight: 600; }
+
+.presentacion {
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+  background-color: #fbfbfb;
+  background-position: center;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 400px); }
+  .presentacion .p1 {
+    grid-column: 2/4;
+    grid-row: 2/4;
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    padding: 30px;
+    margin: 10px;
+    background-color: #ff6542;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in; }
+    .presentacion .p1:hover {
+      transform: translateY(-5px); }
+  .presentacion .p2 {
+    grid-column: 3/5;
+    grid-row: 1/2;
+    width: 300px;
+    height: 300px;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: left;
+    padding: 30px;
+    margin-top: 50px;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease-in; }
+    .presentacion .p2:hover {
+      transform: translateY(-5px); }
+  .presentacion .presentacionTitulo {
+    grid-column: 5/8;
+    grid-row: 1/6;
+    margin-left: 20px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px; }
+    .presentacion .presentacionTitulo h2 {
+      font-size: 45px;
+      font-weight: bolder;
+      margin-bottom: 15px; }
+    .presentacion .presentacionTitulo .p3 {
+      font-size: 25px;
+      font-weight: 200;
+      text-align: left;
+      padding: 5px;
+      margin-top: 10px; }
+    .presentacion .presentacionTitulo .p4 {
+      font-size: 25px;
+      font-weight: 200;
+      text-align: left;
+      padding: 5px;
+      margin-top: 10px; }
+    .presentacion .presentacionTitulo button {
+      width: max-content;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      background-color: #ff6542;
+      color: white;
+      border: none;
+      transition-property: background-color;
+      transition-duration: 0.5s;
+      transition: 0.5s ease-in-out; }
+      .presentacion .presentacionTitulo button:hover {
+        background-color: #ffc859;
+        color: #ff6542;
+        font-weight: 600;
+        transform: translateY(-2px); }
+
+.servicios {
+  width: 100%;
+  height: 120%;
+  background-color: #fbfbfb;
+  color: black;
+  padding: 5px;
+  padding-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(11, 1fr);
+  grid-template-rows: 1/2fr 1fr 1fr;
+  gap: 20px;
+  /*--Diseño de los cuadros--*/ }
+  .servicios .tituloServicios {
+    grid-column: 2/11;
+    grid-row: 1;
+    font-size: 40px;
+    font-weight: 900;
+    padding: 20px;
+    background-color: #fbfbfb;
+    text-align: center; }
+  .servicios div {
+    padding: 25px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+    box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.32);
+    -moz-box-shadow: 10px 10px 38px -4px rgba(0, 0, 0, 0.32);
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition: 0.5s ease-out; }
+    .servicios div:hover {
+      background-color: #ffc859aa;
+      transform: translateY(-2px); }
+    .servicios div img {
+      width: 90px;
+      height: 90px; }
+    .servicios div h3 {
+      font-size: 25px;
+      font-weight: 900; }
+    .servicios div h4 {
+      font-size: 20px;
+      font-weight: 200;
+      margin-top: 5px;
+      margin-bottom: 10px; }
+    .servicios div button {
+      width: max-content;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      background-color: #ff6542de;
+      color: white;
+      border: none;
+      transition-property: background-color;
+      transition-duration: 0.3s; }
+      .servicios div button:hover {
+        background-color: #607196;
+        color: black;
+        font-weight: 600; }
+  .servicios .servicio1 {
+    grid-column: 2/5;
+    grid-row: 2; }
+  .servicios .servicio2 {
+    grid-column: 5/8;
+    grid-row: 2; }
+  .servicios .servicio3 {
+    grid-column: 8/11;
+    grid-row: 2; }
+  .servicios .servicio4 {
+    grid-column: 2/5;
+    grid-row: 3; }
+  .servicios .servicio5 {
+    grid-column: 5/8;
+    grid-row: 3; }
+  .servicios .servicio6 {
+    grid-column: 8/11;
+    grid-row: 3; }
+
+.experiencias {
+  width: 100%;
+  height: 100%; }
+  .experiencias div h2 {
+    font-size: 35px;
+    font-weight: 900;
+    background-color: #fbfbfb;
+    text-align: center; }
+  .experiencias div .carousel-inner {
+    width: 100%;
+    height: 100%; }
+    .experiencias div .carousel-inner div img {
+      height: 100%;
+      width: 100%; }
+
+.formulario {
+  width: 100%;
+  height: 100%;
+  padding: 10px; }
+  .formulario h2 {
+    width: 100%;
+    height: 100%;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 10px; }
+  .formulario h3 {
+    width: 100%;
+    font-size: 25px;
+    color: #ff6542;
+    text-align: center; }
+  .formulario .cuerpoformulario {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; }
+    .formulario .cuerpoformulario form {
+      width: 100%;
+      height: 30%;
+      padding: 10px; }
+      .formulario .cuerpoformulario form ul {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center; }
+        .formulario .cuerpoformulario form ul li {
+          width: 50%; }
+          .formulario .cuerpoformulario form ul li div input {
+            font-size: 12px; }
+            .formulario .cuerpoformulario form ul li div input:hover {
+              border: solid 1px black; }
+          .formulario .cuerpoformulario form ul li div textarea {
+            font-size: 14px; }
+            .formulario .cuerpoformulario form ul li div textarea:hover {
+              border: solid 1px black; }
+          .formulario .cuerpoformulario form ul li div button {
+            width: 100%;
+            background-color: #ff6542;
+            border: none;
+            transition-property: background-color;
+            transition-duration: 0.3s;
+            transition: 0.8s ease-out; }
+            .formulario .cuerpoformulario form ul li div button:hover {
+              background-color: #fa9a84;
+              transform: translateY(-2px); }
+            .formulario .cuerpoformulario form ul li div button input {
+              width: max-content;
+              height: max-content;
+              background-color: transparent;
+              border: none;
+              color: white;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 1px;
+              transition-property: color;
+              transition-duration: 0.3s; }
+              .formulario .cuerpoformulario form ul li div button input:hover {
+                color: black; }
+  .formulario img {
+    width: 50%;
+    height: 40%; }
+
+.botonWsp {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 55px;
+  height: 55px;
+  line-height: 55px; }
+  .botonWsp button {
+    border: none;
+    background-color: transparent; }
+    .botonWsp button i {
+      color: #ff6542;
+      font-size: 55px;
+      transition-property: color;
+      transition-duration: 0.3s; }
+      .botonWsp button i:hover {
+        color: #ffc859; }
+
+.heroNosotros {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: #ffc759;
+  background: radial-gradient(circle, #ffc759 0%, #ff6542 100%);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  .heroNosotros div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .heroNosotros div .turning {
+      font-family: 'Mulish', sans-serif;
+      font-size: 55px;
+      font-weight: 900;
+      color: black;
+      text-transform: capitalize;
+      text-align: center;
+      padding-bottom: 40px; }
+    .heroNosotros div .Turning2 {
+      width: 70%;
+      text-align: center;
+      font-size: 25px;
+      font-weight: 400;
+      color: black; }
+      .heroNosotros div .Turning2 .nosotrosApSoluciones {
+        color: #fbfbfb;
+        font-style: inherit;
+        font-size: 25px;
+        font-weight: 900;
+        font-style: oblique; }
+
+.presentacionNosotros {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  padding-top: 50px;
+  margin-bottom: 30px; }
+  .presentacionNosotros div {
+    width: 100%;
+    height: max-content;
+    padding-left: 50px;
+    text-align: justify;
+    /*Boton:trabajemos juntos*/ }
+    .presentacionNosotros div .p1Nosotros {
+      width: 100%;
+      height: 50%;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: 400; }
+    .presentacionNosotros div .p2Nosotros {
+      width: 100%;
+      height: 50%;
+      padding: 15px;
+      font-size: 20px;
+      font-weight: 300; }
+    .presentacionNosotros div button {
+      width: max-content;
+      font-weight: 400;
+      padding: 10px 15px;
+      margin: 15px;
+      font-size: 14px;
+      background-color: #FF6542;
+      color: white;
+      border: none;
+      box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+      -webkit-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55);
+      -moz-box-shadow: 10px 6px 8px -4px rgba(0, 0, 0, 0.55); }
+  .presentacionNosotros .imgNosotros img {
+    width: 100%;
+    height: 100%; }
+
+.heroServicios {
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  background: #fbfbfb;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+  .heroServicios div {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .heroServicios div .nosomos {
+      font-family: 'Mulish', sans-serif;
+      font-size: 50px;
+      font-weight: 600;
+      color: black;
+      text-align: center;
+      padding-bottom: 40px; }
+      .heroServicios div .nosomos .socioEstrategico {
+        color: #ff6542;
+        font-weight: 900; }
+
+.heroTrabaja {
+  width: 100%;
+  height: 500px;
+  background-color: white;
+  background-position: center;
+  background-image: url("/img/equipodetrabajo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: scroll; }
+  .heroTrabaja div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.871); }
+    .heroTrabaja div .trabajaconnosotros {
+      color: #ff6542;
+      font-size: 65px;
+      font-weight: 600; }
+    .heroTrabaja div h2 {
+      color: #fbfbfb;
+      font-size: 20px;
+      font-weight: 600; }
+
+.formularioTrabaja {
+  width: 100%;
+  height: 100%;
+  padding: 10px; }
+  .formularioTrabaja h2 {
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 10px;
+    padding: 10px 30px 5px 30px; }
+  .formularioTrabaja h3 {
+    width: 100%;
+    font-size: 25px;
+    color: #ff6542;
+    text-align: center; }
+  .formularioTrabaja .cuerpoformulario {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; }
+    .formularioTrabaja .cuerpoformulario form {
+      width: 100%;
+      height: 30%;
+      padding: 10px; }
+      .formularioTrabaja .cuerpoformulario form ul {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center; }
+        .formularioTrabaja .cuerpoformulario form ul li {
+          width: 50%; }
+          .formularioTrabaja .cuerpoformulario form ul li div input {
+            font-size: 12px; }
+            .formularioTrabaja .cuerpoformulario form ul li div input:hover {
+              border: solid 1px black; }
+          .formularioTrabaja .cuerpoformulario form ul li div textarea {
+            font-size: 14px; }
+            .formularioTrabaja .cuerpoformulario form ul li div textarea:hover {
+              border: solid 1px black; }
+          .formularioTrabaja .cuerpoformulario form ul li div button {
+            width: 100%;
+            background-color: #ff6542;
+            border: none;
+            transition-property: background-color;
+            transition-duration: 0.3s;
+            transition: 0.8s ease-out; }
+            .formularioTrabaja .cuerpoformulario form ul li div button:hover {
+              background-color: #fa9a84;
+              transform: translateY(-2px); }
+            .formularioTrabaja .cuerpoformulario form ul li div button input {
+              width: max-content;
+              height: max-content;
+              background-color: transparent;
+              border: none;
+              color: white;
+              font-size: 16px;
+              font-weight: 600;
+              letter-spacing: 1px;
+              transition-property: color;
+              transition-duration: 0.3s; }
+              .formularioTrabaja .cuerpoformulario form ul li div button input:hover {
+                color: black; }
+  .formularioTrabaja img {
+    width: 50%;
+    height: 40%; }
+
+.heroSuscribete {
+  width: 100%;
+  height: 100%;
+  padding: 30px; }
+  .heroSuscribete .suscribeteDiv1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    .heroSuscribete .suscribeteDiv1 h1 {
+      color: #ff6542;
+      font-size: 50px;
+      font-weight: 600;
+      text-align: left;
+      padding-bottom: 25px;
+      padding-top: 25px; }
+  .heroSuscribete .suscribeteDiv2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; }
+    .heroSuscribete .suscribeteDiv2 h2 {
+      width: 75%;
+      color: black;
+      font-size: 25px;
+      font-weight: 200;
+      text-align: left;
+      padding: 45px; }
+      .heroSuscribete .suscribeteDiv2 h2 .suscribeteApSoluciones {
+        color: #607196;
+        font-weight: 600; }
+    .heroSuscribete .suscribeteDiv2 img {
+      width: 50%;
+      height: 100%; }
+
+footer {
+  background-color: #607196b7;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: start;
+  text-align: justify;
+  /*Columna Navegación*/
+  /*Columna contactos*/ }
+  footer .footerLogo {
+    /*LOGO*/
+    /*Logo y link instagram*/ }
+    footer .footerLogo img {
+      width: 100%;
+      height: 150px; }
+    footer .footerLogo button {
+      width: 100%;
+      height: 100%;
+      background-color: #c5c5c500;
+      color: black;
+      border: none;
+      /*Icono seguinos*/ }
+      footer .footerLogo button a {
+        text-decoration: none;
+        color: black;
+        margin-right: 5px;
+        transition-property: color;
+        transition-duration: 0.3s; }
+        footer .footerLogo button a:hover {
+          color: #ff6542; }
+      footer .footerLogo button img {
+        color: black;
+        width: 20px;
+        height: 20px;
+        margin-left: 5px; }
+  footer .footerNavegacion h3 {
+    padding-bottom: 5px;
+    font-size: 20px; }
+  footer .footerNavegacion ul {
+    line-height: 30px;
+    padding: 0px;
+    display: block;
+    text-align: left; }
+    footer .footerNavegacion ul li a {
+      color: black;
+      font-size: 15px;
+      font-weight: 400;
+      text-decoration: none;
+      transition-property: color;
+      transition-duration: 0.3s; }
+      footer .footerNavegacion ul li a:hover {
+        color: #ff6542; }
+  footer .footerContactos {
+    height: 100%; }
+    footer .footerContactos h3 {
+      padding-bottom: 5px;
+      font-size: 20px; }
+    footer .footerContactos ul {
+      line-height: 30px;
+      padding: 0px;
+      display: block;
+      text-align: left; }
+      footer .footerContactos ul li {
+        color: black;
+        font-size: 15px;
+        font-weight: 400;
+        text-decoration: none; }
+
+@media screen and (max-width: 950px) {
+  .accesoContactos ul li a {
+    font-size: 10px; } }
+
+@media screen and (max-width: 450px) {
+  .accesoContactos ul li a {
+    font-size: 8px; } }
+
+@media screen and (max-width: 950px) {
+  .header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr; }
+    .header .headerLogo {
+      grid-column: 2;
+      grid-row: 1; }
+    .header .headerBarra {
+      grid-column: span 3;
+      grid-row: 2; }
+      .header .headerBarra ul li a {
+        font-size: 10px;
+        font-weight: 600; }
+        .header .headerBarra ul li a .resaltador {
+          color: #ff6542;
+          font-size: 11px;
+          font-weight: 600; } }
+
+@media screen and (max-width: 650px) {
+  .header {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr; }
+    .header .headerLogo {
+      grid-column: 2;
+      grid-row: 1; }
+    .header .headerBarra {
+      grid-column: span 3;
+      grid-row: 2;
+      padding: 10px; }
+      .header .headerBarra ul li a {
+        font-size: 9px;
+        font-weight: 600; }
+        .header .headerBarra ul li a .resaltador {
+          color: #ff6542;
+          font-size: 10px;
+          font-weight: 600; }
+      .header .headerBarra ul button {
+        width: max-content;
+        padding: 5px;
+        font-size: 10px;
+        font-weight: 400;
+        margin-left: 0px; } }
+
+@media screen and (max-width: 500px) {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .header .headerLogo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left; }
+    .header .headerBarra ul {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: start;
+      padding-left: 20px; }
+      .header .headerBarra ul li a {
+        font-size: 9px;
+        font-weight: 600;
+        padding-bottom: 10px; } }
+
+@media screen and (max-width: 950px) {
+  .heroTexto h1 {
+    font-size: 40px;
+    text-align: center; }
+  .heroTexto h2 {
+    font-size: 30px;
+    text-align: center; } }
+
+@media screen and (max-width: 550px) {
+  .hero {
+    width: 100%;
+    height: 400px; }
+    .hero .heroTexto h1 {
+      font-size: 30px; }
+    .hero .heroTexto h2 {
+      font-size: 25px; }
+    .hero .heroTexto button {
+      font-weight: 600;
+      padding: 5px 10px;
+      font-size: 10px; } }
+
+@media screen and (max-width: 950px) {
+  .presentacion {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.20fr 0.20fr 1fr;
+    padding: 20px; }
+    .presentacion .p1 {
+      grid-column: 1;
+      grid-row: 2;
+      width: 80%;
+      height: 100%;
+      font-size: 18px; }
+    .presentacion .p2 {
+      grid-column: 2;
+      grid-row: 1;
+      width: 80%;
+      height: 100%;
+      font-size: 18px; }
+    .presentacion .presentacionTitulo {
+      grid-column: span 2;
+      grid-row: 3;
+      margin-top: 25px;
+      margin-left: 0px; }
+    .presentacion .presentacionTitulo h2 {
+      font-size: 35px; }
+    .presentacion .p3 {
+      font-size: 22px;
+      font-weight: 200;
+      text-align: left;
+      padding: 5px;
+      margin-top: 10px; }
+    .presentacion .p4 {
+      font-size: 22px;
+      font-weight: 200;
+      text-align: left;
+      padding: 5px;
+      margin-top: 10px; } }
+
+@media screen and (max-width: 550px) {
+  .presentacion {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.20fr 0.20fr 1fr; }
+    .presentacion .p1 {
+      grid-column: 1;
+      grid-row: 2;
+      width: 80%;
+      height: 80%;
+      margin: 15px;
+      font-size: 15px; }
+    .presentacion .p2 {
+      grid-column: 1;
+      grid-row: 1;
+      width: 80%;
+      height: 80%;
+      margin: 15px;
+      font-size: 15px; }
+    .presentacion .presentacionTitulo {
+      grid-column: 1;
+      grid-row: 3;
+      margin-top: 25px;
+      margin-left: 0px; }
+    .presentacion .presentacionTitulo h2 {
+      font-size: 30px; }
+    .presentacion .p3 {
+      font-size: 20px;
+      font-weight: 200;
+      text-align: left;
+      padding: 5px;
+      margin-top: 10px; }
+    .presentacion .p4 {
+      font-size: 20px;
+      font-weight: 200;
+      text-align: left;
+      padding: 5px;
+      margin-top: 10px; } }
+
+/*PRNINT*/
+@media print {
+  .presentacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center; } }
+
+@media screen and (max-width: 950px) {
+  .servicios {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr auto;
+    gap: 10px;
+    padding: 20px; }
+    .servicios .tituloServicios {
+      grid-column: 1/3;
+      grid-row: 1; }
+    .servicios .servicio1 {
+      grid-column: 1;
+      grid-row: 2; }
+    .servicios .servicio2 {
+      grid-column: 2;
+      grid-row: 2; }
+    .servicios .servicio3 {
+      grid-column: 1;
+      grid-row: 3; }
+    .servicios .servicio4 {
+      grid-column: 2;
+      grid-row: 3; }
+    .servicios .servicio5 {
+      grid-column: 1;
+      grid-row: 4; }
+    .servicios .servicio6 {
+      grid-column: 2;
+      grid-row: 4; }
+  .servicios div {
+    padding: 10px; }
+  .servicios div h2 {
+    font-size: 45px;
+    padding: 0px; }
+  .servicios div h3 {
+    font-size: 20px;
+    padding: 0px; } }
+
+@media screen and (max-width: 500px) {
+  .servicios {
+    grid-template-columns: 0.5fr;
+    grid-auto-rows: 1fr;
+    gap: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*primera fila de servicios*/
+    /*segunda fila de servicios*/ }
+    .servicios .tituloServicios {
+      grid-column: 1;
+      grid-row: 1; }
+    .servicios .servicio1 {
+      grid-column: 1;
+      grid-row: 2; }
+    .servicios .servicio2 {
+      grid-column: 1;
+      grid-row: 3; }
+    .servicios .servicio3 {
+      grid-column: 1;
+      grid-row: 4; }
+    .servicios .servicio4 {
+      grid-column: 1;
+      grid-row: 5; }
+    .servicios .servicio5 {
+      grid-column: 1;
+      grid-row: 6; }
+    .servicios .servicio6 {
+      grid-column: 1;
+      grid-row: 7; }
+  .servicios h2 {
+    font-size: 40px;
+    padding: 5px; }
+  .servicios h3 {
+    font-size: 20px; } }
+
+@media print {
+  h2 {
+    color: #ff6542; } }
+
+@media screen and (max-width: 800px) {
+  .experiencias DIV h2 {
+    font-size: 25px; } }
+
+@media screen and (max-width: 550px) {
+  .experiencias DIV h2 {
+    font-size: 20px; } }
+
+@media screen and (max-width: 950px) {
+  .formulario h2 {
+    font-size: 30px; }
+  .formulario h3 {
+    font-size: 20px; }
+  .formulario .cuerpoformulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .formulario .cuerpoformulario form {
+      width: 50%;
+      height: 50%;
+      padding: 10px; }
+      .formulario .cuerpoformulario form ul li div input {
+        font-size: 14px; }
+  .formulario img {
+    display: none; } }
+
+@media screen and (max-width: 500px) {
+  .formulario h2 {
+    font-size: 20px; }
+  .formulario h3 {
+    font-size: 15px;
+    margin: 0px; }
+  .formulario .cuerpoformulario form {
+    width: 70%;
+    height: 50%;
+    padding: 5px; }
+    .formulario .cuerpoformulario form ul li div input {
+      font-size: 10px; }
+    .formulario .cuerpoformulario form ul li div button {
+      padding: 0px; }
+      .formulario .cuerpoformulario form ul li div button input {
+        font-size: 12px; }
+  .formulario .cuerpoformulario img {
+    display: none; } }
+
+@media screen and (max-width: 800px) {
+  .botonWsp {
+    bottom: 10px;
+    right: 10px; }
+    .botonWsp button i {
+      font-size: 40px; } }
+
+@media screen and (max-width: 500px) {
+  .botonWsp {
+    visibility: hidden; } }
+
+@media print {
+  .botonWsp {
+    display: none; } }
+
+@media screen and (max-width: 600px) {
+  footer {
+    height: 100%;
+    width: 100%;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start; }
+  .footerNavegacion {
+    margin-top: 10px;
+    margin-bottom: 10px; } }
+
+@media screen and (max-width: 950px) {
+  .heroNosotros div .turning {
+    font-size: 50px;
+    padding: 10px; }
+  .heroNosotros div .Turning2 {
+    width: 70%;
+    font-size: 20px;
+    padding: 10px; }
+    .heroNosotros div .Turning2 .nosotrosApSoluciones {
+      font-size: 20px; } }
+
+@media screen and (max-width: 500px) {
+  .heroNosotros {
+    padding: 10px; }
+    .heroNosotros div .turning {
+      font-size: 25px;
+      padding-top: 10px; }
+    .heroNosotros div .Turning2 {
+      font-size: 18px;
+      width: 100%;
+      padding-top: 20px; }
+      .heroNosotros div .Turning2 .nosotrosApSoluciones {
+        font-size: 15px; } }
+
+@media screen and (max-width: 850px) {
+  .presentacionNosotros {
+    display: flex;
+    flex-direction: column;
+    padding: 50px; }
+    .presentacionNosotros div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px; } }
+
+@media screen and (max-width: 550px) {
+  .presentacionNosotros {
+    display: flex;
+    flex-direction: column;
+    padding: 20px; }
+    .presentacionNosotros div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0px; }
+      .presentacionNosotros div .p1Nosotros {
+        font-size: 18px;
+        text-align: center; }
+      .presentacionNosotros div .p2Nosotros {
+        font-size: 18px;
+        text-align: center; }
+      .presentacionNosotros div .imgNosotros img {
+        display: none; } }
+
+@media screen and (max-width: 950px) {
+  .heroServicios div .nosomos {
+    font-size: 30px;
+    padding: 10px; }
+    .heroServicios div .nosomos span {
+      font-size: 32px; } }
+
+@media screen and (max-width: 950px) {
+  .heroServicios {
+    padding: 0px; }
+    .heroServicios div .nosomos {
+      font-size: 30px;
+      padding: 10px; }
+      .heroServicios div .nosomos span {
+        font-size: 32px; } }
+
+@media screen and (max-width: 950px) {
+  .heroSuscribete .suscribeteDiv1 h1 {
+    font-size: 25px;
+    padding: 10px; }
+  .heroSuscribete .suscribeteDiv2 h2 {
+    font-size: 18px; }
+    .heroSuscribete .suscribeteDiv2 h2 span {
+      font-size: 20px; } }
+
+@media screen and (max-width: 500px) {
+  .heroSuscribete .suscribeteDiv1 h1 {
+    font-size: 25px;
+    padding: 10px; }
+  .heroSuscribete .suscribeteDiv2 {
+    width: 100%; }
+    .heroSuscribete .suscribeteDiv2 h2 {
+      width: 100%;
+      font-size: 15px;
+      padding: 10px; }
+      .heroSuscribete .suscribeteDiv2 h2 span {
+        font-size: 20px; }
+    .heroSuscribete .suscribeteDiv2 img {
+      display: none; } }
+
+@media screen and (max-width: 950px) {
+  .heroTrabaja div {
+    padding: 20px; }
+    .heroTrabaja div .trabajaconnosotros {
+      font-size: 45px; }
+    .heroTrabaja div h2 {
+      font-size: 20px;
+      text-align: center;
+      padding: 30px; }
+  .formularioTrabaja {
+    padding-bottom: 50px; }
+    .formularioTrabaja h2 {
+      font-size: 30px;
+      padding: 20px; }
+    .formularioTrabaja h3 {
+      font-size: 20px;
+      padding: 20px; }
+    .formularioTrabaja img {
+      display: none; } }
+
+@media screen and (max-width: 550px) {
+  .heroTrabaja div {
+    padding: 20px; }
+    .heroTrabaja div .trabajaconnosotros {
+      font-size: 28px; }
+    .heroTrabaja div h2 {
+      font-size: 18px;
+      text-align: center;
+      padding: 30px; }
+  .formularioTrabaja h2 {
+    font-size: 18px;
+    padding: 20px; }
+  .formularioTrabaja h3 {
+    font-size: 15px;
+    padding: 20px; }
+  .formularioTrabaja img {
+    display: none; } }

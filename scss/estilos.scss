@@ -1,0 +1,20 @@
+//Generales
+@import "./base/generales";
+//VARIABLES
+@import "./base/variables";
+
+//ACCESOCONTACTOS
+@import "./components/accesocontactos";
+
+//HEADER
+@import "./components/header";
+
+//LAYOUT (MAIN DE DOCUMENTO)
+@import "./components/layaout";
+
+
+//FOOTER
+@import "./components/footer";
+
+//MEDIA QUERYS
+@import "./base/mediaquery";
