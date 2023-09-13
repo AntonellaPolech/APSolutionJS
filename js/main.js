@@ -2,36 +2,37 @@
 
 //---------------------INGRESO DEL USUARIO---------------------------
 function ingresarUsuario() {
-    let usuario = prompt("Ingrese usuario");
-    alert("El usuario ingresar es " + usuario);
-    console.log("¡Hola " + usuario + "!");
+    let usuario = prompt("Ingrese usuario")
+    alert("El usuario ingresar es " + usuario)
+    console.log("¡Hola " + usuario + "!")
 }
-
 ingresarUsuario();
+
 //----------------------SELECCION DE SERVICIOS y ARMADO DE CARRITO-------------------------------------
-let gestionMensual = 1000 ; 
-let auditoriaFiscal = 2000 ;
-let planificacionFiscal = (gestionMensual + auditoriaFiscal);
+let gestionmensual = 1000;
+let auditoriafiscal = 2000;
+let planificacionfiscal = 3000;
 
-let seleccionServicio = prompt("Seleccione los servicios a cotizar: gestionMensual; auditoriaFiscal ó planificacionFiscal").toLocaleLowerCase();
+let seleccionServicio = prompt("Seleccione los servicios a cotizar: gestionmensual / auditoriafiscal / planificacionfiscal").toLocaleLowerCase();
 
-if (seleccionServicio == "gestionMensual") {
-    console.log("Cotización del servicio = " + gestionMensual);
-} else if (seleccionServicio == "auditoriaFiscal") {
-    console.log("Cotización del servicio = " + auditoriaFiscal);
-} else if (seleccionServicio == "planificacionFiscal") {
-    console.log("Cotización del servicio = " + planificacionFiscal);
+if (seleccionServicio == "gestionmensual") {
+    console.log("Cotización del servicio = " + gestionmensual);
+    seleccionServicio = Number(gestionmensual);
+} else if (seleccionServicio == "auditoriafiscal") {
+    console.log("Cotización del servicio = " + auditoriafiscal);
+    seleccionServicio = Number(auditoriafiscal);
+} else if (seleccionServicio == "planificacionfiscal") {
+    console.log("Cotización del servicio = " + planificacionfiscal);
+    seleccionServicio = Number(planificacionfiscal);
 } else {
     console.log("No se indico ningún servicio");
 }
-
 
 const cantidadServicios = Number(prompt("Indique la cantidad por servicio"));
 console.log("Se agregaron " + cantidadServicios + " a la cotización")
 
 //--------------------------------COSTO TOTAL DE COTIZACIÓN--------------------------------
 let costoServicio = Number(seleccionServicio);
-
 
 for (let i = 0; i <= cantidadServicios; i++) {
     if (cantidadServicios > 0) {
@@ -44,12 +45,18 @@ for (let i = 0; i <= cantidadServicios; i++) {
 }
 
 /*FINALIZAR COTIZACIÓN*/
-let costoTotal = seleccionServicio * cantidadServicios;
+let costoNeto = (seleccionServicio * cantidadServicios);
+let impuesto = (0.21 * costoNeto);
+let costoTotal = (costoNeto + impuesto);
+
+let finalizarCotizacion = prompt("¿Desea finalizar la cotización?")
 
 if (finalizarCotizacion = true) {
-    console.log("El costo final cotizado es " + costoTotal);
-} else{
-    console.log ("Continuar comprando")
+    console.log("Total Neto = " + costoNeto);
+    console.log("IVA = " + impuesto);
+    console.log("Total = " + costoTotal);
+} else {
+    console.log("Continuar comprando")
 }
 
 //--------------------------------METODOS DE PAGO--------------------------------
