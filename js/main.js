@@ -2,57 +2,112 @@
 
 //---------------------INGRESO DEL USUARIO---------------------------
 function ingresarUsuario() {
-    let usuario = prompt("Ingrese usuario")
-    alert("El usuario ingresar es " + usuario)
-    console.log("¡Hola " + usuario + "!")
+    let usuario = prompt("Ingrese usuario");
+    alert("El usuario ingresar es " + usuario);
+    console.log("¡Hola " + usuario + "!");
 }
 ingresarUsuario();
 
-//----------------------SELECCION DE SERVICIOS y ARMADO DE CARRITO-------------------------------------
-let gestionmensual = 1000;
-let auditoriafiscal = 2000;
-let planificacionfiscal = 3000;
-
-let seleccionServicio = prompt("Seleccione los servicios a cotizar: gestionmensual / auditoriafiscal / planificacionfiscal").toLocaleLowerCase();
-
-if (seleccionServicio == "gestionmensual") {
-    console.log("Cotización del servicio = " + gestionmensual);
-    seleccionServicio = Number(gestionmensual);
-} else if (seleccionServicio == "auditoriafiscal") {
-    console.log("Cotización del servicio = " + auditoriafiscal);
-    seleccionServicio = Number(auditoriafiscal);
-} else if (seleccionServicio == "planificacionfiscal") {
-    console.log("Cotización del servicio = " + planificacionfiscal);
-    seleccionServicio = Number(planificacionfiscal);
-} else {
-    console.log("No se indico ningún servicio");
+//SERVICIOS
+function Productos(n, l, d, c) {
+    this.nombre = n
+    this.liquidacion = l
+    this.detalle = d
+    this.costo = Number(c)
 }
 
-const cantidadServicios = Number(prompt("Indique la cantidad por servicio"));
-console.log("Se agregaron " + cantidadServicios + " a la cotización")
+const gestionMensual = new Productos("Gestión Mensual", "Mensual", "Obligaciones fiscales y contables de todo contribuyente", 20000)
+const auditoria = new Productos("Auditoría Fiscal", "Anual", "Hacemos un relevamiento de todos los datos dispuestos, la información que conoce AFIP y las presentaciones realizadas", 80000)
+const liquidacionSueldos = new Productos("Liquidación de Sueldos", "Mensual", "Servicio de alta de empleado, liquidación de sueldos mensual, incluyendo recibos de haberes, liquidación de cargas sociales y licencias", 40000)
+
+function seleccionarServicio() {
+    console.log('Seleccione un servicio:');
+    console.log('1: Gestion Mensual');
+    console.log('2: Auditoría Fiscal');
+    console.log('3: Liquidación de Sueldos');
+    console.log("-----------------------------");
+
+    let op = prompt('Consulte por un servicio');
+    switch (op) {
+        case "1":
+            console.log("Se Selecciono Gestion Mensual");
+            console.log("Tipo de liquidación = " + gestionMensual.liquidacion);
+            console.log("Descripción = " + gestionMensual.detalle);
+            break;
+        case "2":
+            console.log("Se Selecciono Auditoría Fiscal");
+            console.log("Tipo de liquidación = " + auditoria.liquidacion);
+            console.log("Descripción = " + auditoria.detalle);
+            break;
+        case "3":
+            console.log("Se Selecciono Liquidación de Sueldos");
+            console.log("Tipo de liquidación = " + liquidacionSueldos.liquidacion);
+            console.log("Descripción = " + liquidacionSueldos.detalle);
+            break;
+        default:
+            console.log("No se ha seleccionado ningun servicio");
+            seleccionarServicio()
+    }
+}
+seleccionarServicio();
+console.log("------------------------------")
+
+//------------------------
+let cotizar = prompt("¿Desea realizar una cotización?")
+if (cotizar = true) {
+    console.log("Se procede a la cotización")
+    cotizarServicio();
+} else {
+    console.log("No se desea realizar una cotización");
+}
+
+//-------------------------
+function cotizarServicio() {
+    console.log('Servicios:');
+    console.log('1: Gestion Mensual');
+    console.log('2: Auditoría Fiscal');
+    console.log('3: Liquidación de Sueldos');
+
+    let seleccionServicio = prompt("Seleccione los servicios a cotizar: ");
+
+    if (seleccionServicio === "1") {
+        console.log("Cotización de " + gestionMensual.nombre + " es " + gestionMensual.costo);
+        servicioElegido = gestionMensual.costo;
+    } else if (seleccionServicio === "2") {
+        console.log("Cotización de " + auditoria.nombre + " es " + auditoria.costo);
+        servicioElegido = auditoria.costo;
+    } else if (seleccionServicio === "3") {
+        console.log("Cotización de " + liquidacionSueldos.nombre + " es " + liquidacionSueldos.costo);
+        servicioElegido = liquidacionSueldos.costo;
+    } else {
+        console.log("No se indico ningún servicio");
+        cotizarServicio();
+    }
+}
 
 //--------------------------------COSTO TOTAL DE COTIZACIÓN--------------------------------
-let costoServicio = Number(seleccionServicio);
+let cantidadServicios = prompt("Indique la cantidad de meses que desea adquirir el servicio");
 
 for (let i = 0; i <= cantidadServicios; i++) {
     if (cantidadServicios > 0) {
-        let costoTotal = seleccionServicio * cantidadServicios;
-        console.log("Servicio:" + seleccionServicio + " Cantidad:" + cantidadServicios + " Costo total= " + costoTotal);
+        let costoNeto = servicioElegido * cantidadServicios;
+        console.log("Servicio:" + servicioElegido + " Cantidad:" + cantidadServicios + " Costo Neto= " + costoNeto);
     }
     else {
         console.log("No se agregaron servicios a la cotización");
     }
 }
+console.log("-------------------------------------------")
 
 /*FINALIZAR COTIZACIÓN*/
-let costoNeto = (seleccionServicio * cantidadServicios);
+let costoNeto = (servicioElegido * cantidadServicios);
 let impuesto = (0.21 * costoNeto);
 let costoTotal = (costoNeto + impuesto);
 
 let finalizarCotizacion = prompt("¿Desea finalizar la cotización?")
 
 if (finalizarCotizacion = true) {
-    console.log("Total Neto = " + costoNeto);
+    console.log("Costo Neto = " + costoNeto);
     console.log("IVA = " + impuesto);
     console.log("Total = " + costoTotal);
 } else {
@@ -60,16 +115,26 @@ if (finalizarCotizacion = true) {
 }
 
 //--------------------------------METODOS DE PAGO--------------------------------
-const metodoPago = prompt("Seleccione metodo de pago (efectivo ó tarjeta)")
+function metodoPago() {
+    console.log("Metodos de pago disponibles:");
+    console.log("1: Transferencia");
+    console.log("2: Tarjeta de Crédito");
+    console.log("3: MercadoPago");
 
-switch (metodoPago.toLowerCase()) {
-    case "efectivo":
-        console.log("Realizaste el pago en efectivo");
-        break;
-    case "tarjeta":
-        console.log("Realizaste el pago con Tarjeta");
-        break;
-    default:
-        console.log("No se realizo el pago");
-        break;
+    let metododePago = prompt("Seleccione metodo de pago:")
+    switch (metododePago) {
+        case "1":
+            console.log("Realizaste el pago por transferencia");
+            break;
+        case "2":
+            console.log("Realizaste el pago con tarjeta de crédito");
+            break;
+        case "3":
+            console.log("Realizaste el pago por MercadoPago");
+            break;
+        default:
+            console.log("No se realizo el pago");
+            metodoPago();
+    }
 }
+metodoPago();
