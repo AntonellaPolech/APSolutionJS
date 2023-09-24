@@ -20,6 +20,8 @@ const gestionMensual = new Productos("Gestión Mensual", "Mensual", "Obligacione
 const auditoria = new Productos("Auditoría Fiscal", "Anual", "Hacemos un relevamiento de todos los datos dispuestos, la información que conoce AFIP y las presentaciones realizadas", 80000)
 const liquidacionSueldos = new Productos("Liquidación de Sueldos", "Mensual", "Servicio de alta de empleado, liquidación de sueldos mensual, incluyendo recibos de haberes, liquidación de cargas sociales y licencias", 40000)
 
+
+
 function seleccionarServicio() {
     console.log('Seleccione un servicio:');
     console.log('1: Gestion Mensual');
@@ -138,3 +140,31 @@ function metodoPago() {
     }
 }
 metodoPago();
+
+//Arrays
+console.log("------------------------")
+const tipoContribuyentes = new Array("1.Responsable Inscripto", "2.Monotributista", "3.Consumidor Final", "4.No Inscripto", "5.Exento")
+
+console.log("Existen los siguientes tipos de contribuyentes:")
+for (let i = 0; i < tipoContribuyentes.length; i += 1) {
+    console.log(tipoContribuyentes[i])
+}
+
+//Precios de consultorias
+const consultas = [
+    { id: 1, contribuyente: 'Responsable Inscripto', precio: 10000 },
+    { id: 2, contribuyente: 'Monotributista', precio: 5000 },
+]
+
+const buscado = consultas.find(consulta => consulta.id === 2)
+console.log(buscado)
+
+//map - actualización de precios consultas
+const actualizacionConsultas = consultas.map((el) => {
+    return {
+        contribuyente: el.contribuyente,
+        precio: el.precio * 1.35,
+    }
+})
+console.log(actualizacionConsultas)
+
