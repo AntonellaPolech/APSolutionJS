@@ -146,20 +146,29 @@ console.log("------------------------")
 const tipoContribuyentes = new Array("1.Responsable Inscripto", "2.Monotributista", "3.Consumidor Final", "4.No Inscripto", "5.Exento")
 
 console.log("Existen los siguientes tipos de contribuyentes:")
-for (let i = 0; i < tipoContribuyentes.length; i += 1) {
+for(let i=0; i<tipoContribuyentes.length; i+=1){
     console.log(tipoContribuyentes[i])
 }
 
 //Precios de consultorias
 const consultas = [
-    { id: 1, contribuyente: 'Responsable Inscripto', precio: 10000 },
-    { id: 2, contribuyente: 'Monotributista', precio: 5000 },
+    {id: 1, contribuyente:'Responsable Inscripto', precio: 10000},
+    {id: 2, contribuyente: 'Monotributista', precio: 5000},
 ]
 
-const buscado = consultas.find(consulta => consulta.id === 2)
+//find 
+console.log("--------Buscar consulta para monotributistas: ")
+const buscado = consultas.find(consulta => consulta.id ===2)
 console.log(buscado)
 
-//map - actualización de precios consultas
+//Filter
+console.log("--------Consultas mayores a $7.000: ")
+const filtroPrecio = consultas.filter(consulta => consulta.precio > 7000)
+console.log(filtroPrecio)
+
+//map - actualización de precios de consulta
+
+console.log("--------Actualización lista de precios: ")
 const actualizacionConsultas = consultas.map((el) => {
     return {
         contribuyente: el.contribuyente,
@@ -167,4 +176,3 @@ const actualizacionConsultas = consultas.map((el) => {
     }
 })
 console.log(actualizacionConsultas)
-
